@@ -1,0 +1,39 @@
+Global Variables:
+
+suits, ranks, and values define the possible suits, ranks, and corresponding values for the cards in the game.
+playing is a boolean variable used to control the main game loop.
+Card Class:
+
+Represents a single playing card with attributes suit and rank.
+The __str__ method returns a string representation of the card.
+Deck Class:
+
+Represents a deck of 52 playing cards.
+Initializes the deck with all possible combinations of suits and ranks.
+Provides methods for shuffling the deck and dealing a single card.
+Hand Class:
+
+Represents a hand of cards held by a player or the dealer.
+Keeps track of the cards in the hand, their total value, and the number of aces.
+Includes methods to add a card to the hand and adjust the value considering the possibility of aces being worth 1 or 11.
+Chips Class:
+
+Represents the chips used for betting in the game.
+Initializes with a starting total amount and keeps track of the current bet.
+Function Definitions:
+
+take_bet: Allows the player to place a bet.
+hit: Adds a card to a player's hand.
+hit_or_stand: Asks the player whether to hit (take another card) or stand (end their turn).
+show_some and show_all: Display the current hands, hiding the dealer's first card in the former and showing all cards in the latter.
+player_busts, player_wins, dealer_busts, dealer_wins, and push: Functions to handle different game outcomes (player or dealer busting, winning, or pushing).
+Game Loop:
+
+The main game loop starts with a welcome message and continues until the player decides to stop playing.
+Inside the loop, a new deck is created and shuffled, and hands are dealt to the player and the dealer.
+The player places a bet, and then their turn begins.
+During the player's turn, they can choose to hit or stand.
+If the player busts (total value of hand exceeds 21), the dealer wins and the player loses their bet.
+If the player stands, the dealer reveals their hand and hits until their hand value is at least 17.
+The outcome of the game is determined based on the final hand values, and chips are adjusted accordingly.
+The player is prompted to play another hand or exit the game.
